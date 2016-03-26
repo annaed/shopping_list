@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Note extends React.Component {
+export default class Title extends React.Component {
 	constructor(props){
 		super(props);
 
@@ -15,7 +15,7 @@ export default class Note extends React.Component {
 			return this.renderEdit();
 		}
 
-		return this.renderNote();
+		return this.renderTitle();
 	}
 
 	renderEdit = () => {
@@ -28,57 +28,40 @@ export default class Note extends React.Component {
 		//this.refs.input. This can be useful when combined with React lifecycle hooks.
 	return <input type="text"
       ref={
-        (e) => e ? e.selectionStart = this.props.item.length : null
+        (e) => e ? e.selectionStart = this.props.title.length: null
       }
       autoFocus={true}
-      defaultValue={this.props.item}
+      defaultValue={this.props.title}
       onBlur={this.finishEdit}
       onKeyPress={this.checkEnter} />;
   };
-  renderNote = () => {
-    const onDelete = this.props.onDelete;
 
+  renderTitle = () => {
     return (
       <div onClick={this.edit}>
-        <span className="item">{this.props.item}</span>
-        {onDelete ? this.renderDelete() : null }
+        <span className="title">{this.props.title}</span>
       </div>
     );
+  };
 
-  };
- 
-  renderDelete = () => {
-    return <button 
-    className="delete-note"
-    onClick={this.props.onDelete}>x</button>;
-  };
   edit = () => {
-    // Enter edit mode.
-    this.setState({
+      this.setState({
       editing: true
     });
   };
+
   checkEnter = (e) => {
-    // The user hit *enter*, let's finish up.
     if(e.key === 'Enter') {
       this.finishEdit(e);
     }
   };
+
   finishEdit = (e) => {
-    // `Note` will trigger an optional `onEdit` callback once it
-    // has a new value. We will use this to communicate the change to
-    // `App`.
-    //
-    // A smarter way to deal with the default value would be to set
-    // it through `defaultProps`.
-    //
-    // See the *Typing with React* chapter for more information.
     const value = e.target.value;
 
-    if(this.props.onEdit) {
-      this.props.onEdit(value);
+    if(this.props.title.onEdit) {
+      this.props.title.onEdit(value);
 
-      // Exit edit mode.
       this.setState({
         editing: false
       });

@@ -4,6 +4,8 @@ import React from 'react';
 
 import Notes from './Notes.jsx';
 
+import Title from './Title.jsx';
+
 export default class App extends React.Component {
   
   constructor(props) {
@@ -23,22 +25,24 @@ export default class App extends React.Component {
          id: uuid.v4(),
          item: 'Grapes'
        }
-  	  ]
+  	  ],
+  	  title: ['List']
   	};
   }
   render() {
 
     const notes = this.state.notes;
-
+    const title = this.state.title;
 
 return (
       <div>
         <button className="add-note" onClick={this.addNote}>add item</button>
-        
+        <Title title={title} 
+        onEdit={this.editTitle}
+        onDelete={this.deleteTitle}/>
         <Notes notes={notes}
           onEdit={this.editNote}
           onDelete={this.deleteNote} />
-
       
       </div>
     );
@@ -76,5 +80,17 @@ return (
 
     this.setState({notes});
   };
+
+	editTitle = () => {
+	    if(!title.trim()) {
+	      return;
+	    }
+
+	    const title = this.state.title.map(title => {
+	      return title;
+	    });
+
+	    this.setState({title});
+	};
 
 }
