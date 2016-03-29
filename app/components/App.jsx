@@ -47,6 +47,7 @@ export default class App extends React.Component {
 return (
       <div>
         <button className="add-note" onClick={this.addNote}>add item</button>
+        <button className="add-list" onClick={this.addList}>add list</button>
         <Titles titles={titles} 
           onEdit={this.editTitle}
           onDelete={this.deleteTitle}/>
@@ -63,6 +64,13 @@ return (
 
     this.setState({
       notes: this.state.notes.filter(note => note.id !== id)
+    });
+  };
+  deleteTitle = (id, e) => {
+    e.stopPropagation();
+
+    this.setState({
+      titles: this.state.titles.filter(title => title.id !== id)
     });
   };
   addNote = () => {
@@ -93,6 +101,16 @@ return (
     });
 
     this.setState({notes});
+  };
+
+addList = () => {
+
+  	this.setState({
+  		titles: this.state.titles.concat([{
+  			id: uuid.v4(),
+  			name: 'New List'
+  		}])
+  	});
   };
 
 	editTitle = (id, name) => {

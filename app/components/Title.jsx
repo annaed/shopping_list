@@ -39,14 +39,16 @@ export default class Title extends React.Component {
     const onDelete = this.props.onDelete;
 
     return (
-    <div className="name" onClick={this.edit}>{this.props.name}</div>
+    <div> <span className="name" onClick={this.edit}>{this.props.name}</span>
+    {onDelete ? this.renderDelete() : null }
+    </div>
     );
 
   };
  
   renderDelete = () => {
     return <button 
-    className="delete-note"
+    className="delete-title"
     onClick={this.props.onDelete}>x</button>;
   };
   edit = () => {
