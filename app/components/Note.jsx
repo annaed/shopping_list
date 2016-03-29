@@ -66,6 +66,7 @@ export default class Note extends React.Component {
     if(e.key === 'Enter') {
       this.finishEdit(e);
     }
+
   };
   finishEdit = (e) => {
     // `Note` will trigger an optional `onEdit` callback once it

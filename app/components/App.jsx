@@ -67,22 +67,23 @@ return (
   		notes: this.state.notes.concat([{
   			id: uuid.v4(),
   			item: 'New item',
-  			price: '$0.99',
-  			sku: uuid.v4()
+  			price: 'N/A',
+  			sku: 'N/A'  		
   		}])
   	});
   };
 
-  editNote = (id, item) => {
+
+  editNote = (id, item, sku) => {
+
     if(!item.trim()) {
+      
       return;
     }
 
     const notes = this.state.notes.map(note => {
-      if(note.id === id && item) {
-        note.item = item;
-      }
-
+      if(note.id === id && item) note.item = item;
+      if(note.item !== 'New item') note.sku = note.id;
       return note;
     });
 
@@ -95,7 +96,7 @@ return (
 	    }
 
 	    const titles = this.state.titles.map(title => {
-	      return title;
+	    	return title;
 	    });
 
 	    this.setState({titles});

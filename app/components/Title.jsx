@@ -39,10 +39,7 @@ export default class Title extends React.Component {
     const onDelete = this.props.onDelete;
 
     return (
-    <div>
-      <span onClick={this.edit}>{this.props.title}</span>
-
-      </div>
+    <div onClick={this.edit}>{this.props.title}</div>
     );
 
   };
