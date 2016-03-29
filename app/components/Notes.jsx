@@ -7,6 +7,8 @@ export default ({notes, onEdit, onDelete}) => {
       <li className="note" key={note.id}>
         <Note
           item={note.item}
+          sku={note.sku}
+          price={note.price}
           onEdit={onEdit.bind(null, note.id)}
           onDelete={onDelete.bind(null, note.id)} />
       </li>

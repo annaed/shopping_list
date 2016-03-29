@@ -39,10 +39,13 @@ export default class Note extends React.Component {
     const onDelete = this.props.onDelete;
 
     return (
-      <div onClick={this.edit}>
-        <span className="item">{this.props.item}</span>
+		<div>
+     	<span className="item" onClick={this.edit}>{this.props.item}</span>
         {onDelete ? this.renderDelete() : null }
-      </div>
+        <span>{this.props.price}</span>
+        <span>{this.props.sku}</span>
+
+  		</div>
     );
 
   };

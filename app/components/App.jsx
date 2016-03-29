@@ -4,7 +4,7 @@ import React from 'react';
 
 import Notes from './Notes.jsx';
 
-import Title from './Title.jsx';
+import Titles from './Titles.jsx';
 
 export default class App extends React.Component {
   
@@ -15,29 +15,35 @@ export default class App extends React.Component {
   	 notes: [
   	   {
          id: uuid.v4(),
-         item: 'Oranges'
+         item: 'Oranges',
+         price: '$0.99',
+         sku: uuid.v4()
        },
        {
          id: uuid.v4(),
-         item: 'Apples'
+         item: 'Apples',
+         price: '$0.99',
+         sku: uuid.v4()
        },
        {
          id: uuid.v4(),
-         item: 'Grapes'
+         item: 'Grapes',
+         price: '$0.99',
+         sku: uuid.v4()
        }
   	  ],
-  	  title: ['List']
+  	  titles: ['List']
   	};
   }
   render() {
 
     const notes = this.state.notes;
-    const title = this.state.title;
+    const titles = this.state.titles;
 
 return (
       <div>
         <button className="add-note" onClick={this.addNote}>add item</button>
-        <Title title={title} 
+        <Titles titles={titles} 
         onEdit={this.editTitle}
         onDelete={this.deleteTitle}/>
         <Notes notes={notes}
@@ -60,7 +66,9 @@ return (
   	this.setState({
   		notes: this.state.notes.concat([{
   			id: uuid.v4(),
-  			item: 'New item'
+  			item: 'New item',
+  			price: '$0.99',
+  			sku: uuid.v4()
   		}])
   	});
   };
@@ -81,16 +89,16 @@ return (
     this.setState({notes});
   };
 
-	editTitle = () => {
+	editTitle = (title) => {
 	    if(!title.trim()) {
 	      return;
 	    }
 
-	    const title = this.state.title.map(title => {
+	    const titles = this.state.titles.map(title => {
 	      return title;
 	    });
 
-	    this.setState({title});
+	    this.setState({titles});
 	};
 
 }
