@@ -28,10 +28,10 @@ export default class Title extends React.Component {
     //this.refs.input. This can be useful when combined with React lifecycle hooks.
   return <input type="text"
       ref={
-        (e) => e ? e.selectionStart = this.props.title.length : null
+        (e) => e ? e.selectionStart = this.props.name.length : null
       }
       autoFocus={true}
-      defaultValue={this.props.title}
+      defaultValue={this.props.name}
       onBlur={this.finishEdit}
       onKeyPress={this.checkEnter} />;
   };
@@ -39,7 +39,7 @@ export default class Title extends React.Component {
     const onDelete = this.props.onDelete;
 
     return (
-    <div onClick={this.edit}>{this.props.title}</div>
+    <div className="name" onClick={this.edit}>{this.props.name}</div>
     );
 
   };
