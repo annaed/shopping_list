@@ -6,8 +6,6 @@ import Notes from './Notes.jsx';
 
 import Titles from './Titles.jsx';
 
-import Lists from './Lists.jsx';
-
 export default class App extends React.Component {
   
   constructor(props) {
@@ -45,6 +43,12 @@ export default class App extends React.Component {
 
     const notes = this.state.notes;
     const titles = this.state.titles;
+    
+    var MyList = React.createClass({
+    render: function () {
+    return <div>{this.props.Life}</div>;
+  }
+});
 
 return (
       <div>
@@ -52,11 +56,12 @@ return (
         <button className="add-list" onClick={this.addList}>add list</button>
         <Titles titles={titles} 
           onEdit={this.editTitle}
-          onDelete={this.deleteTitle}/>
-        <Notes notes={notes}
+          onDelete={this.deleteTitle} />
+          <Notes notes={notes}
           onEdit={this.editNote}
           onDelete={this.deleteNote} />
-      
+          
+          <MyList Life={'al;kfjda'} />
       </div>
     );
   }
@@ -77,14 +82,14 @@ return (
   };
   addNote = () => {
 
-  	this.setState({
-  		notes: this.state.notes.concat([{
-  			id: uuid.v4(),
-  			item: 'New item',
-  			price: 'Please name your item',
-  			sku: 'N/A'  		
-  		}])
-  	});
+    this.setState({
+      notes: this.state.notes.concat([{
+        id: uuid.v4(),
+        item: 'New item',
+        price: 'Please name your item',
+        sku: 'N/A'      
+      }])
+    });
   };
 
 
@@ -107,27 +112,28 @@ return (
 
 addList = () => {
 
-  	this.setState({
-  		titles: this.state.titles.concat([{
-  			id: uuid.v4(),
-  			name: 'New List'
-  		}])
-  	});
+    this.setState({
+      titles: this.state.titles.concat([{
+        id: uuid.v4(),
+        name: 'New List'
+      }])
+    });
   };
 
-	editTitle = (id, name) => {
+  editTitle = (id, name) => {
 
-	    if(!name.trim()) {
+      if(!name.trim()) {
 
-	      return;
-	    }
+        return;
+      }
 
-	    const titles = this.state.titles.map(title => {
-	    	if(title.id === id && name) title.name = name;
-	    	return title;
-	    });
+      const titles = this.state.titles.map(title => {
+        if(title.id === id && name) title.name = name;
+        return title;
+      });
 
-	    this.setState({titles});
-	};
+      this.setState({titles});
+  };
+
 
 }
