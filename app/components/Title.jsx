@@ -36,21 +36,14 @@ export default class Title extends React.Component {
       onKeyPress={this.checkEnter} />;
   };
   renderTitle = () => {
-    const onDelete = this.props.onDelete;
 
     return (
     <div> <span className="name" onClick={this.edit}>{this.props.name}</span>
-    {onDelete ? this.renderDelete() : null }
     </div>
     );
 
   };
  
-  renderDelete = () => {
-    return <button 
-    className="delete-title"
-    onClick={this.props.onDelete}>x</button>;
-  };
   edit = () => {
     // Enter edit mode.
     this.setState({

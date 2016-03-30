@@ -6,39 +6,41 @@ import Notes from './Notes.jsx';
 
 import Titles from './Titles.jsx';
 
+import Lists from './Lists.jsx';
+
 export default class App extends React.Component {
   
   constructor(props) {
     super(props);
+    this.state = {
+         notes: [
+           {
+             id: uuid.v4(),
+             item: 'Oranges',
+             price: '$0.99',
+             sku: Math.floor(Math.random()*(10000000-5000000))+5000000
+           },
+           {
+             id: uuid.v4(),
+             item: 'Apples',
+             price: '$0.99',
+             sku: Math.floor(Math.random()*(10000000-5000000))+5000000
+           },
+           {
+             id: uuid.v4(),
+             item: 'Grapes',
+             price: '$0.99',
+             sku: Math.floor(Math.random()*(10000000-5000000))+5000000
+           }
+          ],
+          titles: [
+            { id: uuid.v4(),
+              name: 'List'
+          }
+          ]
+        };
+}
 
-  	this.state = {
-  	 notes: [
-  	   {
-         id: uuid.v4(),
-         item: 'Oranges',
-         price: '$0.99',
-         sku: Math.floor(Math.random()*(10000000-5000000))+5000000
-       },
-       {
-         id: uuid.v4(),
-         item: 'Apples',
-         price: '$0.99',
-         sku: Math.floor(Math.random()*(10000000-5000000))+5000000
-       },
-       {
-         id: uuid.v4(),
-         item: 'Grapes',
-         price: '$0.99',
-         sku: Math.floor(Math.random()*(10000000-5000000))+5000000
-       }
-  	  ],
-  	  titles: [
-  	  	{	id: uuid.v4(),
-  	  		name: 'List'
-  	  }
-  	  ]
-  	};
-  }
   render() {
 
     const notes = this.state.notes;

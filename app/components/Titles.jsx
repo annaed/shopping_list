@@ -8,8 +8,7 @@ export default ({titles, onEdit, onDelete}) => {
         <Title 
           id={title.id}
           name={title.name}
-          onEdit={onEdit.bind(null, title.id)}
-          onDelete={onDelete.bind(null, title.id)} />
+          onEdit={onEdit.bind(null, title.id)}/>
       </li>
     )}</ul>
   );
