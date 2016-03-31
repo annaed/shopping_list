@@ -44,9 +44,10 @@ export default class App extends React.Component {
     const notes = this.state.notes;
     const titles = this.state.titles;
     
-    var MyList = React.createClass({
+    var List = React.createClass({
     render: function () {
-    return <div>{this.props.Life}</div>;
+    return <div>{this.props.Titles}
+    {this.props.Notes}</div>;
   }
 });
 
@@ -54,14 +55,11 @@ return (
       <div>
         <button className="add-note" onClick={this.addNote}>add item</button>
         <button className="add-list" onClick={this.addList}>add list</button>
-        <Titles titles={titles} 
+          <List  Titles={<Titles titles={titles} 
           onEdit={this.editTitle}
-          onDelete={this.deleteTitle} />
-          <Notes notes={notes}
+          onDelete={this.deleteTitle} />} Notes={<Notes notes={notes}
           onEdit={this.editNote}
-          onDelete={this.deleteNote} />
-          
-          <MyList Life={'al;kfjda'} />
+          onDelete={this.deleteNote} />} />
       </div>
     );
   }
@@ -73,7 +71,7 @@ return (
       notes: this.state.notes.filter(note => note.id !== id)
     });
   };
-  deleteTitle = (id, e) => {
+  deleteList = (id, e) => {
     e.stopPropagation();
 
     this.setState({
@@ -116,6 +114,12 @@ addList = () => {
       titles: this.state.titles.concat([{
         id: uuid.v4(),
         name: 'New List'
+      }]),
+      notes: this.state.notes.concat([{
+        id: uuid.v4(),
+        item: 'New Item',
+        price: 'Please name your item',
+        sku: 'N/A' 
       }])
     });
   };
