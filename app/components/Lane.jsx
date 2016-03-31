@@ -6,7 +6,7 @@ import NoteStore from '../stores/NoteStore';
 import LaneActions from '../actions/LaneActions';
 import Editable from './Editable.jsx';
 
-class Lane extends React.Component {
+export default class Lane extends React.Component {
   render() {
     const {lane, ...props} = this.props;
 
@@ -38,24 +38,26 @@ class Lane extends React.Component {
       </div>
     )
   }
-   editNote(id, task) {
-    if(!task.trim()) {
+   editNote(id, item) {
+    if(!item.trim()) {
       NoteActions.update({id, editing: false});
 
       return;
     }
 
-    NoteActions.update({id, task, editing: false});
+    NoteActions.update({id, item, editing: false});
   }
 
   addNote = (e) => {
+  	   e.stopPropagation();
+
     const laneId = this.props.lane.id;
-    const note = NoteActions.create({item: 'New item'});
+    const note = NoteActions.create({item: "New Item"});
 
     LaneActions.attachToLane({
-      noteId: note.id,
+      noteId: note.id, 
       laneId
-    });
+  });
   };
   deleteNote = (noteId, e) => {
     e.stopPropagation();

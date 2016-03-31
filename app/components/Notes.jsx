@@ -7,7 +7,7 @@ export default ({notes, onValueClick, onEdit, onDelete}) => {
       <li className="note" key={note.id}>
         <Editable
           editing={note.editing}
-          value={note.task}
+          value={note.item}
           onValueClick={onValueClick.bind(null, note.id)}
           onEdit={onEdit.bind(null, note.id)}
           onDelete={onDelete.bind(null, note.id)} />
