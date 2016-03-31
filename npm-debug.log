@@ -1,0 +1,108 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'alt-utilis',
+1 verbose cli   '--save' ]
+2 info using npm@2.14.20
+3 info using node@v4.4.0
+4 verbose install initial load of /Users/annadurham/Downloads/shopping_list/package.json
+5 warn package.json kanban_app@0.0.0 No repository field.
+6 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/alt/package.json
+7 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/alt-container/package.json
+8 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/alt-utils/package.json
+9 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/babel-core/package.json
+10 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/babel-loader/package.json
+11 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/babel-preset-es2015/package.json
+12 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/babel-preset-react/package.json
+13 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/babel-preset-react-hmre/package.json
+14 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/babel-preset-survivejs-kanban/package.json
+15 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/css-loader/package.json
+16 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/node-uuid/package.json
+17 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/npm-install-webpack-plugin/package.json
+18 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/react/package.json
+19 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/react-dom/package.json
+20 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/style-loader/package.json
+21 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/webpack/package.json
+22 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/webpack-dev-server/package.json
+23 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/webpack-merge/package.json
+24 info package.json alt-utils@1.0.0 No repository field.
+25 info package.json alt-utils@1.0.0 No README data
+26 info package.json node-uuid@1.4.7 No license field.
+27 verbose readDependencies loading dependencies from /Users/annadurham/Downloads/shopping_list/package.json
+28 silly cache add args [ 'alt-utilis', null ]
+29 verbose cache add spec alt-utilis
+30 silly cache add parsed spec Result {
+30 silly cache add   raw: 'alt-utilis',
+30 silly cache add   scope: null,
+30 silly cache add   name: 'alt-utilis',
+30 silly cache add   rawSpec: '',
+30 silly cache add   spec: 'latest',
+30 silly cache add   type: 'tag' }
+31 silly addNamed alt-utilis@latest
+32 verbose addNamed "latest" is being treated as a dist-tag for alt-utilis
+33 info addNameTag [ 'alt-utilis', 'latest' ]
+34 silly mapToRegistry name alt-utilis
+35 silly mapToRegistry using default registry
+36 silly mapToRegistry registry https://registry.npmjs.org/
+37 silly mapToRegistry uri https://registry.npmjs.org/alt-utilis
+38 verbose addNameTag registry:https://registry.npmjs.org/alt-utilis not in flight; fetching
+39 verbose request uri https://registry.npmjs.org/alt-utilis
+40 verbose request no auth needed
+41 info attempt registry request try #1 at 10:16:43 AM
+42 verbose request id da58934733d7c51d
+43 http request GET https://registry.npmjs.org/alt-utilis
+44 http 404 https://registry.npmjs.org/alt-utilis
+45 verbose headers { 'content-type': 'application/json',
+45 verbose headers   'cache-control': 'max-age=0',
+45 verbose headers   'content-length': '2',
+45 verbose headers   'accept-ranges': 'bytes',
+45 verbose headers   date: 'Thu, 31 Mar 2016 14:16:44 GMT',
+45 verbose headers   via: '1.1 varnish',
+45 verbose headers   age: '0',
+45 verbose headers   connection: 'keep-alive',
+45 verbose headers   'x-served-by': 'cache-dfw1820-DFW',
+45 verbose headers   'x-cache': 'MISS',
+45 verbose headers   'x-cache-hits': '0',
+45 verbose headers   'x-timer': 'S1459433804.191159,VS0,VE73' }
+46 silly get cb [ 404,
+46 silly get   { 'content-type': 'application/json',
+46 silly get     'cache-control': 'max-age=0',
+46 silly get     'content-length': '2',
+46 silly get     'accept-ranges': 'bytes',
+46 silly get     date: 'Thu, 31 Mar 2016 14:16:44 GMT',
+46 silly get     via: '1.1 varnish',
+46 silly get     age: '0',
+46 silly get     connection: 'keep-alive',
+46 silly get     'x-served-by': 'cache-dfw1820-DFW',
+46 silly get     'x-cache': 'MISS',
+46 silly get     'x-cache-hits': '0',
+46 silly get     'x-timer': 'S1459433804.191159,VS0,VE73' } ]
+47 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/alt-utilis
+47 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+47 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+47 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+47 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:199:22)
+47 verbose stack     at emitTwo (events.js:87:13)
+47 verbose stack     at Request.emit (events.js:172:7)
+47 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+47 verbose stack     at emitOne (events.js:82:20)
+47 verbose stack     at Request.emit (events.js:169:7)
+47 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:963:12)
+48 verbose statusCode 404
+49 verbose pkgid alt-utilis
+50 verbose cwd /Users/annadurham/Downloads/shopping_list
+51 error Darwin 14.5.0
+52 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "alt-utilis" "--save"
+53 error node v4.4.0
+54 error npm  v2.14.20
+55 error code E404
+56 error 404 Registry returned 404 for GET on https://registry.npmjs.org/alt-utilis
+56 error 404
+56 error 404 'alt-utilis' is not in the npm registry.
+56 error 404 You should bug the author to publish it (or use the name yourself!)
+56 error 404 It was specified as a dependency of 'kanban_app'
+56 error 404
+56 error 404 Note that you can also install from a
+56 error 404 tarball, folder, http url, or git url.
+57 verbose exit [ 1, true ]

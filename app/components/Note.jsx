@@ -42,8 +42,6 @@ export default class Note extends React.Component {
     <div>
       <span className="item" onClick={this.edit}>{this.props.item}</span>
         {onDelete ? this.renderDelete() : null }
-        <span>{this.props.price}</span>
-        <span>{this.props.sku}</span>
 
       </div>
     );
