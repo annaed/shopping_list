@@ -2,7 +2,7 @@
 1 verbose cli [ '/usr/local/bin/node',
 1 verbose cli   '/usr/local/bin/npm',
 1 verbose cli   'install',
-1 verbose cli   'alt-utilis',
+1 verbose cli   'react-addons-update',
 1 verbose cli   '--save' ]
 2 info using npm@2.14.20
 3 info using node@v4.4.0
@@ -21,88 +21,209 @@
 16 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/node-uuid/package.json
 17 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/npm-install-webpack-plugin/package.json
 18 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/react/package.json
-19 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/react-dom/package.json
-20 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/style-loader/package.json
-21 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/webpack/package.json
-22 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/webpack-dev-server/package.json
-23 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/webpack-merge/package.json
-24 info package.json alt-utils@1.0.0 No repository field.
-25 info package.json alt-utils@1.0.0 No README data
-26 info package.json node-uuid@1.4.7 No license field.
-27 verbose readDependencies loading dependencies from /Users/annadurham/Downloads/shopping_list/package.json
-28 silly cache add args [ 'alt-utilis', null ]
-29 verbose cache add spec alt-utilis
-30 silly cache add parsed spec Result {
-30 silly cache add   raw: 'alt-utilis',
-30 silly cache add   scope: null,
-30 silly cache add   name: 'alt-utilis',
-30 silly cache add   rawSpec: '',
-30 silly cache add   spec: 'latest',
-30 silly cache add   type: 'tag' }
-31 silly addNamed alt-utilis@latest
-32 verbose addNamed "latest" is being treated as a dist-tag for alt-utilis
-33 info addNameTag [ 'alt-utilis', 'latest' ]
-34 silly mapToRegistry name alt-utilis
-35 silly mapToRegistry using default registry
-36 silly mapToRegistry registry https://registry.npmjs.org/
-37 silly mapToRegistry uri https://registry.npmjs.org/alt-utilis
-38 verbose addNameTag registry:https://registry.npmjs.org/alt-utilis not in flight; fetching
-39 verbose request uri https://registry.npmjs.org/alt-utilis
-40 verbose request no auth needed
-41 info attempt registry request try #1 at 10:16:43 AM
-42 verbose request id da58934733d7c51d
-43 http request GET https://registry.npmjs.org/alt-utilis
-44 http 404 https://registry.npmjs.org/alt-utilis
-45 verbose headers { 'content-type': 'application/json',
-45 verbose headers   'cache-control': 'max-age=0',
-45 verbose headers   'content-length': '2',
-45 verbose headers   'accept-ranges': 'bytes',
-45 verbose headers   date: 'Thu, 31 Mar 2016 14:16:44 GMT',
-45 verbose headers   via: '1.1 varnish',
-45 verbose headers   age: '0',
-45 verbose headers   connection: 'keep-alive',
-45 verbose headers   'x-served-by': 'cache-dfw1820-DFW',
-45 verbose headers   'x-cache': 'MISS',
-45 verbose headers   'x-cache-hits': '0',
-45 verbose headers   'x-timer': 'S1459433804.191159,VS0,VE73' }
-46 silly get cb [ 404,
-46 silly get   { 'content-type': 'application/json',
-46 silly get     'cache-control': 'max-age=0',
-46 silly get     'content-length': '2',
-46 silly get     'accept-ranges': 'bytes',
-46 silly get     date: 'Thu, 31 Mar 2016 14:16:44 GMT',
-46 silly get     via: '1.1 varnish',
-46 silly get     age: '0',
-46 silly get     connection: 'keep-alive',
-46 silly get     'x-served-by': 'cache-dfw1820-DFW',
-46 silly get     'x-cache': 'MISS',
-46 silly get     'x-cache-hits': '0',
-46 silly get     'x-timer': 'S1459433804.191159,VS0,VE73' } ]
-47 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/alt-utilis
-47 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
-47 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
-47 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
-47 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:199:22)
-47 verbose stack     at emitTwo (events.js:87:13)
-47 verbose stack     at Request.emit (events.js:172:7)
-47 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1036:10)
-47 verbose stack     at emitOne (events.js:82:20)
-47 verbose stack     at Request.emit (events.js:169:7)
-47 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:963:12)
-48 verbose statusCode 404
-49 verbose pkgid alt-utilis
-50 verbose cwd /Users/annadurham/Downloads/shopping_list
-51 error Darwin 14.5.0
-52 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "alt-utilis" "--save"
-53 error node v4.4.0
-54 error npm  v2.14.20
-55 error code E404
-56 error 404 Registry returned 404 for GET on https://registry.npmjs.org/alt-utilis
-56 error 404
-56 error 404 'alt-utilis' is not in the npm registry.
-56 error 404 You should bug the author to publish it (or use the name yourself!)
-56 error 404 It was specified as a dependency of 'kanban_app'
-56 error 404
-56 error 404 Note that you can also install from a
-56 error 404 tarball, folder, http url, or git url.
-57 verbose exit [ 1, true ]
+19 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/react-dnd/package.json
+20 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/react-dnd-html5-backend/package.json
+21 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/react-dom/package.json
+22 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/style-loader/package.json
+23 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/webpack/package.json
+24 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/webpack-dev-server/package.json
+25 verbose installManyTop reading scoped package data from /Users/annadurham/Downloads/shopping_list/node_modules/webpack-merge/package.json
+26 info package.json alt-utils@1.0.0 No repository field.
+27 info package.json alt-utils@1.0.0 No README data
+28 info package.json node-uuid@1.4.7 No license field.
+29 verbose readDependencies loading dependencies from /Users/annadurham/Downloads/shopping_list/package.json
+30 silly cache add args [ 'react-addons-update', null ]
+31 verbose cache add spec react-addons-update
+32 silly cache add parsed spec Result {
+32 silly cache add   raw: 'react-addons-update',
+32 silly cache add   scope: null,
+32 silly cache add   name: 'react-addons-update',
+32 silly cache add   rawSpec: '',
+32 silly cache add   spec: 'latest',
+32 silly cache add   type: 'tag' }
+33 silly addNamed react-addons-update@latest
+34 verbose addNamed "latest" is being treated as a dist-tag for react-addons-update
+35 info addNameTag [ 'react-addons-update', 'latest' ]
+36 silly mapToRegistry name react-addons-update
+37 silly mapToRegistry using default registry
+38 silly mapToRegistry registry https://registry.npmjs.org/
+39 silly mapToRegistry uri https://registry.npmjs.org/react-addons-update
+40 verbose addNameTag registry:https://registry.npmjs.org/react-addons-update not in flight; fetching
+41 verbose request uri https://registry.npmjs.org/react-addons-update
+42 verbose request no auth needed
+43 info attempt registry request try #1 at 8:20:02 PM
+44 verbose request id 0bbb5741d0a720e0
+45 http request GET https://registry.npmjs.org/react-addons-update
+46 http 200 https://registry.npmjs.org/react-addons-update
+47 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+47 verbose headers   etag: '"5IPLURCGC4C25I7BKCU4GV7ZI"',
+47 verbose headers   'content-type': 'application/json',
+47 verbose headers   'cache-control': 'max-age=300',
+47 verbose headers   'content-length': '18089',
+47 verbose headers   'accept-ranges': 'bytes',
+47 verbose headers   date: 'Fri, 01 Apr 2016 00:20:03 GMT',
+47 verbose headers   via: '1.1 varnish',
+47 verbose headers   age: '0',
+47 verbose headers   connection: 'keep-alive',
+47 verbose headers   'x-served-by': 'cache-ord1730-ORD',
+47 verbose headers   'x-cache': 'HIT',
+47 verbose headers   'x-cache-hits': '1',
+47 verbose headers   'x-timer': 'S1459470003.049442,VS0,VE143',
+47 verbose headers   vary: 'Accept' }
+48 silly get cb [ 200,
+48 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+48 silly get     etag: '"5IPLURCGC4C25I7BKCU4GV7ZI"',
+48 silly get     'content-type': 'application/json',
+48 silly get     'cache-control': 'max-age=300',
+48 silly get     'content-length': '18089',
+48 silly get     'accept-ranges': 'bytes',
+48 silly get     date: 'Fri, 01 Apr 2016 00:20:03 GMT',
+48 silly get     via: '1.1 varnish',
+48 silly get     age: '0',
+48 silly get     connection: 'keep-alive',
+48 silly get     'x-served-by': 'cache-ord1730-ORD',
+48 silly get     'x-cache': 'HIT',
+48 silly get     'x-cache-hits': '1',
+48 silly get     'x-timer': 'S1459470003.049442,VS0,VE143',
+48 silly get     vary: 'Accept' } ]
+49 verbose get saving react-addons-update to /Users/annadurham/.npm/registry.npmjs.org/react-addons-update/.cache.json
+50 verbose correctMkdir /Users/annadurham/.npm correctMkdir not in flight; initializing
+51 silly addNameTag next cb for react-addons-update with tag latest
+52 silly addNamed react-addons-update@0.14.8
+53 verbose addNamed "0.14.8" is a plain semver version for react-addons-update
+54 silly mapToRegistry name react-addons-update
+55 silly mapToRegistry using default registry
+56 silly mapToRegistry registry https://registry.npmjs.org/
+57 silly mapToRegistry uri https://registry.npmjs.org/react-addons-update
+58 verbose addRemoteTarball https://registry.npmjs.org/react-addons-update/-/react-addons-update-0.14.8.tgz not in flight; adding
+59 verbose addRemoteTarball [ 'https://registry.npmjs.org/react-addons-update/-/react-addons-update-0.14.8.tgz',
+59 verbose addRemoteTarball   '486f1fb71e09ef8ad09c0e95fbe59d173782fe1a' ]
+60 info retry fetch attempt 1 at 8:20:03 PM
+61 info attempt registry request try #1 at 8:20:03 PM
+62 http fetch GET https://registry.npmjs.org/react-addons-update/-/react-addons-update-0.14.8.tgz
+63 http fetch 200 https://registry.npmjs.org/react-addons-update/-/react-addons-update-0.14.8.tgz
+64 silly fetchAndShaCheck shasum 486f1fb71e09ef8ad09c0e95fbe59d173782fe1a
+65 verbose addTmpTarball /var/folders/9s/ft7q0m094lv0ry5nh8wnpw5w0000gn/T/npm-2497-08e6364c/registry.npmjs.org/react-addons-update/-/react-addons-update-0.14.8.tgz not in flight; adding
+66 verbose addTmpTarball already have metadata; skipping unpack for react-addons-update@0.14.8
+67 verbose correctMkdir /Users/annadurham/.npm correctMkdir not in flight; initializing
+68 silly cache afterAdd react-addons-update@0.14.8
+69 verbose afterAdd /Users/annadurham/.npm/react-addons-update/0.14.8/package/package.json not in flight; writing
+70 verbose correctMkdir /Users/annadurham/.npm correctMkdir not in flight; initializing
+71 verbose afterAdd /Users/annadurham/.npm/react-addons-update/0.14.8/package/package.json written
+72 silly install resolved [ { name: 'react-addons-update',
+72 silly install resolved     version: '0.14.8',
+72 silly install resolved     main: 'index.js',
+72 silly install resolved     repository:
+72 silly install resolved      { type: 'git',
+72 silly install resolved        url: 'git+https://github.com/facebook/react.git' },
+72 silly install resolved     keywords: [ 'react', 'react-addon' ],
+72 silly install resolved     license: 'BSD-3-Clause',
+72 silly install resolved     dependencies: {},
+72 silly install resolved     peerDependencies: { react: '^0.14.8' },
+72 silly install resolved     description: 'This package provides the React updates add-on.',
+72 silly install resolved     bugs: { url: 'https://github.com/facebook/react/issues' },
+72 silly install resolved     homepage: 'https://github.com/facebook/react#readme',
+72 silly install resolved     _id: 'react-addons-update@0.14.8',
+72 silly install resolved     _shasum: '486f1fb71e09ef8ad09c0e95fbe59d173782fe1a',
+72 silly install resolved     _resolved: 'https://registry.npmjs.org/react-addons-update/-/react-addons-update-0.14.8.tgz',
+72 silly install resolved     _from: 'react-addons-update@latest',
+72 silly install resolved     scripts: {},
+72 silly install resolved     _npmVersion: '2.14.7',
+72 silly install resolved     _nodeVersion: '4.2.1',
+72 silly install resolved     _npmUser: { name: 'gaearon', email: 'dan.abramov@gmail.com' },
+72 silly install resolved     dist:
+72 silly install resolved      { shasum: '486f1fb71e09ef8ad09c0e95fbe59d173782fe1a',
+72 silly install resolved        tarball: 'https://registry.npmjs.org/react-addons-update/-/react-addons-update-0.14.8.tgz' },
+72 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+72 silly install resolved     _npmOperationalInternal:
+72 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+72 silly install resolved        tmp: 'tmp/react-addons-update-0.14.8.tgz_1459268475120_0.8253944886382669' },
+72 silly install resolved     directories: {} } ]
+73 info install react-addons-update@0.14.8 into /Users/annadurham/Downloads/shopping_list
+74 info installOne react-addons-update@0.14.8
+75 verbose installOne of react-addons-update to /Users/annadurham/Downloads/shopping_list not in flight; installing
+76 verbose correctMkdir /Users/annadurham/.npm/_locks correctMkdir not in flight; initializing
+77 verbose lock using /Users/annadurham/.npm/_locks/react-addons-update-d5d9f9ece1e51226.lock for /Users/annadurham/Downloads/shopping_list/node_modules/react-addons-update
+78 silly install write writing react-addons-update 0.14.8 to /Users/annadurham/Downloads/shopping_list/node_modules/react-addons-update
+79 verbose unbuild node_modules/react-addons-update
+80 silly gentlyRm /Users/annadurham/Downloads/shopping_list/node_modules/react-addons-update is being purged from base /Users/annadurham/Downloads/shopping_list
+81 verbose gentlyRm don't care about contents; nuking /Users/annadurham/Downloads/shopping_list/node_modules/react-addons-update
+82 verbose tar unpack /Users/annadurham/.npm/react-addons-update/0.14.8/package.tgz
+83 verbose tar unpacking to /Users/annadurham/Downloads/shopping_list/node_modules/react-addons-update
+84 silly gentlyRm /Users/annadurham/Downloads/shopping_list/node_modules/react-addons-update is being purged
+85 verbose gentlyRm don't care about contents; nuking /Users/annadurham/Downloads/shopping_list/node_modules/react-addons-update
+86 silly gunzTarPerm modes [ '755', '644' ]
+87 silly gunzTarPerm extractEntry package.json
+88 silly gunzTarPerm extractEntry README.md
+89 silly gunzTarPerm extractEntry LICENSE
+90 silly gunzTarPerm extractEntry index.js
+91 silly gunzTarPerm extractEntry PATENTS
+92 verbose write writing to /Users/annadurham/Downloads/shopping_list/node_modules/react-addons-update/package.json
+93 info preinstall react-addons-update@0.14.8
+94 verbose readDependencies loading dependencies from /Users/annadurham/Downloads/shopping_list/node_modules/react-addons-update/package.json
+95 silly prepareForInstallMany adding react@^0.14.8 from react-addons-update peerDependencies
+96 warn peerDependencies The peer dependency react@^0.14.8 included from react-addons-update will no
+97 warn peerDependencies longer be automatically installed to fulfill the peerDependency
+98 warn peerDependencies in npm 3+. Your application will need to depend on it explicitly.
+99 verbose readDependencies loading dependencies from /Users/annadurham/Downloads/shopping_list/node_modules/react-addons-update/package.json
+100 silly install resolved []
+101 verbose about to build /Users/annadurham/Downloads/shopping_list/node_modules/react-addons-update
+102 info build /Users/annadurham/Downloads/shopping_list/node_modules/react-addons-update
+103 info linkStuff react-addons-update@0.14.8
+104 silly linkStuff react-addons-update@0.14.8 has /Users/annadurham/Downloads/shopping_list/node_modules as its parent node_modules
+105 verbose linkBins react-addons-update@0.14.8
+106 verbose linkMans react-addons-update@0.14.8
+107 verbose rebuildBundles react-addons-update@0.14.8
+108 info install react-addons-update@0.14.8
+109 info postinstall react-addons-update@0.14.8
+110 verbose readDependencies loading dependencies from /Users/annadurham/Downloads/shopping_list/package.json
+111 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/alt/package.json
+112 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/alt-container/package.json
+113 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/alt-utils/package.json
+114 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/babel-core/package.json
+115 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/babel-loader/package.json
+116 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/babel-preset-es2015/package.json
+117 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/babel-preset-react/package.json
+118 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/babel-preset-react-hmre/package.json
+119 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/babel-preset-survivejs-kanban/package.json
+120 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/css-loader/package.json
+121 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/node-uuid/package.json
+122 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/npm-install-webpack-plugin/package.json
+123 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/react/package.json
+124 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/react-addons-update/package.json
+125 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/react-dnd/package.json
+126 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/react-dnd-html5-backend/package.json
+127 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/react-dom/package.json
+128 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/style-loader/package.json
+129 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/webpack/package.json
+130 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/webpack-dev-server/package.json
+131 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/webpack-merge/package.json
+132 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/.bin/uuid/package.json
+133 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/.bin/webpack/package.json
+134 verbose targetResolver reading package data from /Users/annadurham/Downloads/shopping_list/node_modules/.bin/webpack-dev-server/package.json
+135 verbose already installed skipping react@^0.14.8 /Users/annadurham/Downloads/shopping_list
+136 silly install resolved []
+137 verbose unlock done using /Users/annadurham/.npm/_locks/react-addons-update-d5d9f9ece1e51226.lock for /Users/annadurham/Downloads/shopping_list/node_modules/react-addons-update
+138 verbose validateInstall loading /Users/annadurham/Downloads/shopping_list/package.json for validation
+139 verbose stack Error: The package react@0.14.7 does not satisfy its siblings' peerDependencies requirements!
+139 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+139 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:268:7
+139 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+139 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+139 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+139 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+139 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+139 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+139 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+139 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+140 verbose cwd /Users/annadurham/Downloads/shopping_list
+141 error Darwin 14.5.0
+142 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "react-addons-update" "--save"
+143 error node v4.4.0
+144 error npm  v2.14.20
+145 error code EPEERINVALID
+146 error peerinvalid The package react@0.14.7 does not satisfy its siblings' peerDependencies requirements!
+146 error peerinvalid Peer react-dnd@2.1.3 wants react@^0.14.0
+146 error peerinvalid Peer react-dom@0.14.7 wants react@^0.14.7
+146 error peerinvalid Peer react-addons-update@0.14.8 wants react@^0.14.8
+147 verbose exit [ 1, true ]
