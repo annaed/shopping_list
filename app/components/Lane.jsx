@@ -53,6 +53,7 @@ const {connectDropTarget, lane, ...props} = this.props;
 		onEdit={this.editNote}
 		onDelete={this.deleteNote} />
 
+
         </AltContainer>
       </div>
     )
@@ -76,6 +77,7 @@ const {connectDropTarget, lane, ...props} = this.props;
     LaneActions.attachToLane({
       noteId: note.id, 
       laneId
+
   });
   };
   deleteNote = (noteId, e) => {

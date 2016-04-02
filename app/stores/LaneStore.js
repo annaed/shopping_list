@@ -60,7 +60,7 @@ class LaneStore {
 	detachFromLane({laneId, noteId}) {
 		const lanes = this.lanes.map(lane => {
 			if(lane.id === laneId) {
-				lane.notes - lane.notes.filter(note => note !== noteId);
+				lane.notes = lane.notes.filter(note => note !== noteId);
 			}
 
 			return lane;

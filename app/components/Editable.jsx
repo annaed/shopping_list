@@ -18,9 +18,7 @@ export default class Editable extends React.Component {
   renderEdit = () => {
     return <input type="text"
       ref={
-
         (e) => e ? e.selectionStart = this.props.value.length : null
-
       }
       autoFocus={true}
 
@@ -37,6 +35,9 @@ export default class Editable extends React.Component {
       <div onClick={this.props.onValueClick}>
         <span className="value">{this.props.value}</span>
         {onDelete ? this.renderDelete() : null }
+        <span className="sku">SKU: {this.props.sku}</span>
+        
+     <span className="price">Price: {this.props.price}</span>
       </div>
     );
   };

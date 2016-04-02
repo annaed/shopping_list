@@ -17,7 +17,8 @@ class NoteStore {
 		const notes = this.notes;
 
 		note.id = uuid.v4();
-
+		note.price = '0.99';
+		
 		this.setState({
 			notes: notes.concat(note)
 		});
