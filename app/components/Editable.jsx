@@ -35,9 +35,6 @@ export default class Editable extends React.Component {
       <div onClick={this.props.onValueClick}>
         <span className="value">{this.props.value}</span>
         {onDelete ? this.renderDelete() : null }
-        <span className="sku">SKU: {this.props.sku}</span>
-        
-     <span className="price">Price: {this.props.price}</span>
       </div>
     );
   };

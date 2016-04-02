@@ -34,7 +34,7 @@ export default class App extends React.Component {
 
 
   addLane() {
-    LaneActions.create({name: 'New lane'});
+    LaneActions.create({name: 'New List'});
   }
 
 }

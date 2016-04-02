@@ -49,9 +49,9 @@ const {connectDropTarget, lane, ...props} = this.props;
             notes: () => NoteStore.getNotesByIds(lane.notes)
           }}
         >
-		<Notes onValueClick = {this.activateNoteEdit}
-		onEdit={this.editNote}
-		onDelete={this.deleteNote} />
+    <Notes onValueClick={this.activateNoteEdit}
+          onEdit={this.editNote}
+    onDelete={this.deleteNote} />
 
 
         </AltContainer>
