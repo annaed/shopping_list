@@ -37,14 +37,51 @@ const noteTarget = {
 
 export default class Note extends React.Component {
   render() {
-    const {connectDragSource, connectDropTarget, isDragging, id, name, amount, value, editing, onMove, ...props} = this.props;
+    const {connectDragSource, connectDropTarget, isDragging, id, onDelete, name, amount, value, editing, onMove, ...props} = this.props;
     const dragSource = editing ? a => a : connectDragSource;
     return dragSource(connectDropTarget(
       <li style={{
         opacity: isDragging ? 0: 1
-      }} {...props}><span>Item: {this.props.name} <br /></span>
+      }} {...props}><span onClick={this.props.onValueClick}>Item: {this.props.name} <br /></span>
+              {onDelete ? this.renderDelete() : null }
+
       <span>Price: {this.props.amount} <br /></span>
       <span>SKU: {this.props.id} <br /></span> </li>
     ));
   }
+  renderEdit = () => {
+    return <input type="text"
+      ref={
+        (e) => e ? e.selectionStart = this.props.name.length : null
+      }
+      autoFocus={true}
+
+      defaultValue={this.props.name}
+
+      onBlur={this.finishEdit}
+      onKeyPress={this.checkEnter} />;
+  };
+
+  renderDelete = () => {
+    return <button
+
+      className="delete"
+
+      onClick={this.props.onDelete}>x</button>;
+  };
+
+
+  checkEnter = (e) => {
+    if(e.key === 'Enter') {
+      this.finishEdit(e);
+    }
+  };
+  finishEdit = (e) => {
+    const value = e.target.value;
+
+    if(this.props.onEdit) {
+      this.props.onEdit(value);
+
+    }
+  };
 }
