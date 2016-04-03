@@ -32,6 +32,10 @@ class NoteStore {
 			if(note.id === updatedNote.id) {
 				return Object.assign({}, note, updatedNote);
 			}
+
+			if(note.price === updatedNote.price) {
+				return Object.assign({}, note, updatedNote);
+			}
 			return note;
 		});
 		this.setState({notes});

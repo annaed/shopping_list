@@ -50,7 +50,8 @@ const {connectDropTarget, lane, ...props} = this.props;
           }}
         >
     <Notes onValueClick={this.activateNoteEdit}
-          onEdit={this.editNote}
+          onEdit={this.editNote} 
+          onEditPrice={this.editPrice}
     onDelete={this.deleteNote} />
 
 
@@ -100,6 +101,13 @@ const {connectDropTarget, lane, ...props} = this.props;
 
     LaneActions.update({id: laneId, name, editing: false});
   };
+
+  editPrice(id, price) {
+
+
+    NoteActions.update({id, price, editing: false});
+  };
+
   deleteLane = () => {
     const laneId = this.props.lane.id;
 

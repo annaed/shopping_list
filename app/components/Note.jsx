@@ -42,7 +42,7 @@ export default class Note extends React.Component {
     return dragSource(connectDropTarget(
       <li style={{
         opacity: isDragging ? 0: 1
-      }} {...props}>{editing ? this.renderEditName() : this.renderName()}{this.renderPrice()}</li>
+      }} {...props}>{editing ? this.renderEditPrice() : this.renderPrice()}</li>
     ));
   }
 
@@ -101,6 +101,7 @@ renderPrice = () => {
       </div>
     );
   };
+
   renderEditPrice = () => {
     return <input type="text"
       ref={
@@ -108,7 +109,21 @@ renderPrice = () => {
       }
       autoFocus={true}
       defaultValue={this.props.amount}
-      onBlur={this.finishEdit}
-      onKeyPress={this.checkEnter} />;
+      onBlur={this.finishEditPrice}
+      onKeyPress={this.checkEnterPrice} />;
+  };
+
+checkEnterPrice = (e) => {
+    if(e.key === 'Enter') {
+      this.finishEditPrice(e);
+    }
+  };
+  finishEditPrice = (e) => {
+    const value = e.target.value;
+
+    if(this.props.onEditPrice) {
+      this.props.onEditPrice(value);
+
+    }
   };
 }
