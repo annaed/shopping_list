@@ -13,7 +13,7 @@ font-family: sans-serif;
   border: 1px solid #ccc;
   border-radius: 0.5em;
 
-  min-width: 10em;
+  min-width: 20em;
   vertical-align: top;
 }
 
@@ -75,7 +75,7 @@ font-family: sans-serif;
   margin: 0.5em;
   padding-left: 0;
 
-  max-width: 10em;
+  max-width: 20em;
   list-style: none;
 }
 .note {

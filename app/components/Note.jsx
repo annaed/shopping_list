@@ -42,24 +42,23 @@ export default class Note extends React.Component {
     return dragSource(connectDropTarget(
       <li style={{
         opacity: isDragging ? 0: 1
-      }} {...props}>{editing ? this.renderEdit() : this.renderValue()}</li>
+      }} {...props}>{editing ? this.renderEditName() : this.renderName()}{this.renderPrice()}</li>
     ));
   }
 
-  renderValue = () => {
+  renderName = () => {
     const onDelete = this.props.onDelete;
 
     return (
     <div>
       <span onClick={this.props.onValueClick}>Item: {this.props.name} <br /></span>
       {onDelete ? this.renderDelete() : null }
-      <span>Price: {this.props.amount} <br /></span>
       <span>SKU: {this.props.id} <br /></span> 
       </div>
     );
   };
 
- renderEdit = () => {
+ renderEditName = () => {
     return <input type="text"
       ref={
         (e) => e ? e.selectionStart = this.props.name.length : null
@@ -91,5 +90,25 @@ export default class Note extends React.Component {
       this.props.onEdit(value);
 
     }
+  };
+
+renderPrice = () => {
+    const onDelete = this.props.onDelete;
+
+    return (
+    <div>
+      <span onClick={this.props.onValueClick}>Price: {this.props.amount} <br /></span>
+      </div>
+    );
+  };
+  renderEditPrice = () => {
+    return <input type="text"
+      ref={
+        (e) => e ? e.selectionStart = this.props.amount.length : null
+      }
+      autoFocus={true}
+      defaultValue={this.props.amount}
+      onBlur={this.finishEdit}
+      onKeyPress={this.checkEnter} />;
   };
 }
