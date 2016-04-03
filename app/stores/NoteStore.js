@@ -18,6 +18,7 @@ class NoteStore {
 
 		note.id = uuid.v4();
 		note.price = '0.99';
+		note.name = 'New Item';
 		
 		this.setState({
 			notes: notes.concat(note)

@@ -58,21 +58,21 @@ const {connectDropTarget, lane, ...props} = this.props;
       </div>
     )
   }
-   editNote(id, item) {
-    if(!item.trim()) {
+   editNote(id, name) {
+    if(!name.trim()) {
       NoteActions.update({id, editing: false});
 
       return;
     }
 
-    NoteActions.update({id, item, editing: false});
-  }
+    NoteActions.update({id, name, editing: false});
+  };
 
   addNote = (e) => {
   	   e.stopPropagation();
 
     const laneId = this.props.lane.id;
-    const note = NoteActions.create({item: "New Item"});
+    const note = NoteActions.create({name: "New Item"});
 
     LaneActions.attachToLane({
       noteId: note.id, 
@@ -112,6 +112,6 @@ const {connectDropTarget, lane, ...props} = this.props;
   };
   activateNoteEdit(id) {
     NoteActions.update({id, editing: true});
-  }
+  };
 
 }

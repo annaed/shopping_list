@@ -85,10 +85,10 @@ export default class Note extends React.Component {
     }
   };
   finishEdit = (e) => {
-    const value = e.target.name;
+    const value = e.target.value;
 
     if(this.props.onEdit) {
-      this.props.onEdit(name);
+      this.props.onEdit(value);
 
     }
   };

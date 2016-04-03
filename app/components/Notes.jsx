@@ -6,7 +6,7 @@ import LaneActions from '../actions/LaneActions';
 export default ({notes, onValueClick, onEdit, onDelete}) => {
   return (
     <ul className="notes">{notes.map(note =>
-      <Note className="note" id={note.id} amount={note.price} name={note.item} key={note.id} editing={note.editing}
+      <Note className="note" id={note.id} amount={note.price} name={note.name} key={note.id} editing={note.editing}
           onMove={LaneActions.move} 
           onValueClick={onValueClick.bind(null, note.id)}
           onEdit={onEdit.bind(null, note.id)}
