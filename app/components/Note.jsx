@@ -42,7 +42,7 @@ export default class Note extends React.Component {
     return dragSource(connectDropTarget(
       <li style={{
         opacity: isDragging ? 0: 1
-      }} {...props}>{editing ? this.renderEditPrice() : this.renderPrice()}</li>
+      }} {...props}>{editing ? this.renderEditName() : this.renderName()}{this.renderPrice()}</li>
     ));
   }
 
@@ -53,7 +53,7 @@ export default class Note extends React.Component {
     <div>
       <span onClick={this.props.onValueClick}>Item: {this.props.name} <br /></span>
       {onDelete ? this.renderDelete() : null }
-      <span>SKU: {this.props.id} <br /></span> 
+      <span>SKU #: {this.props.id} <br /></span> 
       </div>
     );
   };
@@ -97,7 +97,9 @@ renderPrice = () => {
 
     return (
     <div>
-      <span onClick={this.props.onValueClick}>Price: {this.props.amount} <br /></span>
+      <span 
+      //onClick={this.props.onValueClick}
+      >Price: ${this.props.amount} <br /></span>
       </div>
     );
   };

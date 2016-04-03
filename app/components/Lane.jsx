@@ -49,7 +49,8 @@ const {connectDropTarget, lane, ...props} = this.props;
             notes: () => NoteStore.getNotesByIds(lane.notes)
           }}
         >
-    <Notes onValueClick={this.activateNoteEdit}
+    <Notes
+    onValueClick={this.activateNoteEdit}
           onEdit={this.editNote} 
           onEditPrice={this.editPrice}
     onDelete={this.deleteNote} />

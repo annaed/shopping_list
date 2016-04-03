@@ -16,8 +16,9 @@ class NoteStore {
 
 		const notes = this.notes;
 
+
 		note.id = uuid.v4();
-		note.price = '0.99';
+		note.price = Math.trunc(Math.random() * (10.00-1.00)) + 0.99;
 		note.name = 'New Item';
 		
 		this.setState({
