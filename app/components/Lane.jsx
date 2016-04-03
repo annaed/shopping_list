@@ -103,7 +103,11 @@ const {connectDropTarget, lane, ...props} = this.props;
   };
 
   editPrice(id, price) {
+    if(!price.trim()) {
+      NoteActions.update({id, editing: false});
 
+      return;
+    }
 
     NoteActions.update({id, price, editing: false});
   };
