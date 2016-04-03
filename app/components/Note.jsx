@@ -54,6 +54,7 @@ export default class Note extends React.Component {
       <span onClick={this.props.onValueClick}>Item: {this.props.name} <br /></span>
       {onDelete ? this.renderDelete() : null }
       <span>SKU #: {this.props.id} <br /></span> 
+
       </div>
     );
   };
@@ -76,6 +77,8 @@ export default class Note extends React.Component {
 
       onClick={this.props.onDelete}>x</button>;
   };
+
+  
 
 
   checkEnter = (e) => {

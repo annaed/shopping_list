@@ -53,33 +53,33 @@
 42 verbose addNameTag registry:https://registry.npmjs.org/react-addons-update not in flight; fetching
 43 verbose request uri https://registry.npmjs.org/react-addons-update
 44 verbose request no auth needed
-45 info attempt registry request try #1 at 10:20:36 PM
-46 verbose request id b99a757739e7dadd
+45 info attempt registry request try #1 at 5:56:05 PM
+46 verbose request id 48fb3a87b971004c
 47 verbose etag "5IPLURCGC4C25I7BKCU4GV7ZI"
 48 http request GET https://registry.npmjs.org/react-addons-update
 49 http 304 https://registry.npmjs.org/react-addons-update
-50 verbose headers { date: 'Sun, 03 Apr 2016 02:20:36 GMT',
+50 verbose headers { date: 'Sun, 03 Apr 2016 21:56:06 GMT',
 50 verbose headers   via: '1.1 varnish',
 50 verbose headers   'cache-control': 'max-age=300',
 50 verbose headers   etag: '"5IPLURCGC4C25I7BKCU4GV7ZI"',
 50 verbose headers   age: '0',
 50 verbose headers   connection: 'keep-alive',
-50 verbose headers   'x-served-by': 'cache-ord1734-ORD',
+50 verbose headers   'x-served-by': 'cache-ord1743-ORD',
 50 verbose headers   'x-cache': 'HIT',
 50 verbose headers   'x-cache-hits': '1',
-50 verbose headers   'x-timer': 'S1459650036.604303,VS0,VE287',
+50 verbose headers   'x-timer': 'S1459720566.161007,VS0,VE141',
 50 verbose headers   vary: 'Accept' }
 51 silly get cb [ 304,
-51 silly get   { date: 'Sun, 03 Apr 2016 02:20:36 GMT',
+51 silly get   { date: 'Sun, 03 Apr 2016 21:56:06 GMT',
 51 silly get     via: '1.1 varnish',
 51 silly get     'cache-control': 'max-age=300',
 51 silly get     etag: '"5IPLURCGC4C25I7BKCU4GV7ZI"',
 51 silly get     age: '0',
 51 silly get     connection: 'keep-alive',
-51 silly get     'x-served-by': 'cache-ord1734-ORD',
+51 silly get     'x-served-by': 'cache-ord1743-ORD',
 51 silly get     'x-cache': 'HIT',
 51 silly get     'x-cache-hits': '1',
-51 silly get     'x-timer': 'S1459650036.604303,VS0,VE287',
+51 silly get     'x-timer': 'S1459720566.161007,VS0,VE141',
 51 silly get     vary: 'Accept' } ]
 52 verbose etag https://registry.npmjs.org/react-addons-update from cache
 53 verbose get saving react-addons-update to /Users/annadurham/.npm/registry.npmjs.org/react-addons-update/.cache.json

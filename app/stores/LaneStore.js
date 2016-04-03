@@ -3,6 +3,7 @@ import alt from '../libs/alt';
 import LaneActions from '../actions/LaneActions';
 import update from 'react-addons-update';
 
+
 class LaneStore {
 	constructor() {
 		this.bindActions(LaneActions);
@@ -15,6 +16,7 @@ class LaneStore {
 
 		lane.id = uuid.v4();
 		lane.notes = lane.notes || [];
+		//lane.total = 0.00;
 
 		this.setState({
 			lanes: lanes.concat(lane)
@@ -69,7 +71,6 @@ class LaneStore {
 		this.setState({lanes});
 	}
 
-
 move({sourceId, targetId}) {
     const lanes = this.lanes;
     const sourceLane = lanes.filter(lane => lane.notes.includes(sourceId))[0];
@@ -92,8 +93,18 @@ move({sourceId, targetId}) {
     }
 
     this.setState({lanes});
-  }
-
 }
 
+//sum({laneId, noteId}) {
+// 	const lanes = this.lanes.map(lane => {
+// 		if(laneId === lane.id) {
+// 			if(lane.notes.includes(noteId)) {
+// 			lane.total += note.price;
+// 		}
+// 	}
+// 		return lane.total;
+// 	});
+// 		this.setState({lanes});
+// }
+}
 export default alt.createStore(LaneStore, 'LaneStore');

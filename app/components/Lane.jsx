@@ -4,9 +4,11 @@ import Notes from './Notes.jsx';
 import NoteActions from '../actions/NoteActions';
 import NoteStore from '../stores/NoteStore';
 import LaneActions from '../actions/LaneActions';
+import LaneStore from '../stores/LaneStore';
 import Editable from './Editable.jsx';
 import {DropTarget} from 'react-dnd';
 import ItemTypes from '../constants/itemTypes';
+
 
 const noteTarget = {
 	hover(targetProps, monitor) {
@@ -42,6 +44,7 @@ const {connectDropTarget, lane, ...props} = this.props;
           <div className="lane-delete">
             <button onClick={this.deleteLane}>x</button>
           </div>
+
 		</div>
         <AltContainer
           stores={[NoteStore]}
@@ -53,10 +56,11 @@ const {connectDropTarget, lane, ...props} = this.props;
     onValueClick={this.activateNoteEdit}
           onEdit={this.editNote} 
           onEditPrice={this.editPrice}
+         // onFinish={this.finishNote}
     onDelete={this.deleteNote} />
 
         </AltContainer>
-        Total = this.lane.notes
+  
       </div>
     )
   }
@@ -90,6 +94,12 @@ const {connectDropTarget, lane, ...props} = this.props;
     LaneActions.detachFromLane({laneId, noteId});
     NoteActions.delete(noteId);
   };
+
+  // finishNote = (noteId) => {
+  //   const laneId = this.props.lane.id;
+
+  //   LaneActions.sum({laneId, noteId});
+  // };
 
   editName = (name) => {
     const laneId = this.props.lane.id;
