@@ -55,8 +55,8 @@ const {connectDropTarget, lane, ...props} = this.props;
           onEditPrice={this.editPrice}
     onDelete={this.deleteNote} />
 
-
         </AltContainer>
+        Total = this.lane.notes
       </div>
     )
   }
