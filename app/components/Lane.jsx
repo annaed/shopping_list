@@ -29,7 +29,8 @@ const noteTarget = {
 }))
 export default class Lane extends React.Component {
   render() {
-const {connectDropTarget, total, lane, ...props} = this.props;
+const {connectDropTarget, //total, 
+  lane, ...props} = this.props;
 
     return connectDropTarget(
       <div {...props}>
@@ -56,11 +57,11 @@ const {connectDropTarget, total, lane, ...props} = this.props;
     onValueClick={this.activateNoteEdit}
           onEdit={this.editNote} 
           onEditPrice={this.editPrice}
-          onFinish={this.finishNote}
+          //onFinish={this.finishNote}
     onDelete={this.deleteNote} />
 
         </AltContainer>
-<span>{total}</span>
+
       </div>
     )
   }
@@ -95,11 +96,11 @@ const {connectDropTarget, total, lane, ...props} = this.props;
     NoteActions.delete(noteId);
   };
 
-  finishNote = (note, total) => {
+//   finishNote = (note, total) => {
  
-    NoteActions.sum({note, total});
-    return total;
-  };
+//     NoteActions.sum({note, total});
+// return total;
+//   };
 
   editName = (name) => {
     const laneId = this.props.lane.id;

@@ -16,7 +16,6 @@ class LaneStore {
 
 		lane.id = uuid.v4();
 		lane.notes = lane.notes || [];
-		//lane.total = 0.00;
 
 		this.setState({
 			lanes: lanes.concat(lane)
@@ -79,7 +78,6 @@ move({sourceId, targetId}) {
     const targetNoteIndex = targetLane.notes.indexOf(targetId);
 
     if(sourceLane === targetLane) {
-      // move at once to avoid complications
       sourceLane.notes = update(sourceLane.notes, {
         $splice: [
           [sourceNoteIndex, 1],
@@ -95,16 +93,6 @@ move({sourceId, targetId}) {
     this.setState({lanes});
 }
 
-//sum({laneId, noteId}) {
-// 	const lanes = this.lanes.map(lane => {
-// 		if(laneId === lane.id) {
-// 			if(lane.notes.includes(noteId)) {
-// 			lane.total += note.price;
-// 		}
-// 	}
-// 		return lane.total;
-// 	});
-// 		this.setState({lanes});
-// }
+
 }
 export default alt.createStore(LaneStore, 'LaneStore');
