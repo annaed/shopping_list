@@ -51,11 +51,11 @@ class NoteStore {
 			id => this.notes.filter(note => note.id === id)
 			).filter(a => a.length).map(a => a[0]);
 	}
-	total(noteId, total) {
-		if(noteId === note.id) 
-			total += note.price;
-		return total;
-	}
-}
+	sum({note, total}) {
 
+		total += note.price;
+
+		return total;
+	};
+}
 export default alt.createStore(NoteStore, 'NoteStore');

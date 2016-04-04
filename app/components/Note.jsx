@@ -37,7 +37,7 @@ const noteTarget = {
 
 export default class Note extends React.Component {
   render() {
-    const {connectDragSource, connectDropTarget, isDragging, id, onDelete, name, amount, value, editing, onMove, ...props} = this.props;
+    const {connectDragSource, connectDropTarget, isDragging, id, onDelete, onFinish, name, amount, value, editing, onMove, ...props} = this.props;
     const dragSource = editing ? a => a : connectDragSource;
     return dragSource(connectDropTarget(
       <li style={{
@@ -48,12 +48,15 @@ export default class Note extends React.Component {
 
   renderName = () => {
     const onDelete = this.props.onDelete;
+    const onFinish = this.props.onFinish;
 
     return (
     <div>
       <span onClick={this.props.onValueClick}>Item: {this.props.name} <br /></span>
       {onDelete ? this.renderDelete() : null }
       <span>SKU #: {this.props.id} <br /></span> 
+      {onFinish ? this.renderFinish() : null }
+
 
       </div>
     );
@@ -76,6 +79,12 @@ export default class Note extends React.Component {
       className="delete"
 
       onClick={this.props.onDelete}>x</button>;
+  };
+
+renderFinish = () => {
+    return <button
+    className="delete"
+      onClick={this.props.onFinish}>f</button>;
   };
 
   

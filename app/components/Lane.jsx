@@ -9,11 +9,11 @@ import Editable from './Editable.jsx';
 import {DropTarget} from 'react-dnd';
 import ItemTypes from '../constants/itemTypes';
 
-
 const noteTarget = {
 	hover(targetProps, monitor) {
     const sourceProps = monitor.getItem();
     const sourceId = sourceProps.id;
+
 
     if(!targetProps.lane.notes.length) {
       LaneActions.attachToLane({
@@ -29,7 +29,7 @@ const noteTarget = {
 }))
 export default class Lane extends React.Component {
   render() {
-const {connectDropTarget, lane, ...props} = this.props;
+const {connectDropTarget, total, lane, ...props} = this.props;
 
     return connectDropTarget(
       <div {...props}>
@@ -56,11 +56,11 @@ const {connectDropTarget, lane, ...props} = this.props;
     onValueClick={this.activateNoteEdit}
           onEdit={this.editNote} 
           onEditPrice={this.editPrice}
-         // onFinish={this.finishNote}
+          onFinish={this.finishNote}
     onDelete={this.deleteNote} />
 
         </AltContainer>
-  
+<span>{total}</span>
       </div>
     )
   }
@@ -95,11 +95,11 @@ const {connectDropTarget, lane, ...props} = this.props;
     NoteActions.delete(noteId);
   };
 
-  // finishNote = (noteId) => {
-  //   const laneId = this.props.lane.id;
-
-  //   LaneActions.sum({laneId, noteId});
-  // };
+  finishNote = (note, total) => {
+ 
+    NoteActions.sum({note, total});
+    return total;
+  };
 
   editName = (name) => {
     const laneId = this.props.lane.id;
