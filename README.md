@@ -9,4 +9,4 @@ I also attempted to add a button to each note that would add the price of that n
 I appreciate any feedback you have for me on my attempt! I hope you enjoy looking at it! I know I have a lot to learn, but I hope you give me the chance to do so. 
 
 Thanks,
-Anna 
+Anna :)
